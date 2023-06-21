@@ -1,3 +1,6 @@
+const addZero = (n) => n < 10 ? `0${n}` : n;
+
+
 const getCurrentDateTime = () => {
 	const months = [
 		'янв',
@@ -30,17 +33,8 @@ const getCurrentDateTime = () => {
 	const month = months[date.getMonth()];
 	const year = date.getFullYear();
 
-	let hours = date.getHours();
-	let minutes = date.getMinutes();
-
-	if (hours < 10) {
-		hours = `0${hours}`
-	}
-
-	if (minutes < 10) {
-		minutes = `0${minutes}`
-	}
-	
+	const hours = addZero(date.getHours());
+	const minutes = addZero(date.getMinutes());
 
 	return { year, month, dayOfWeek, dayOfMonth, hours, minutes }
 }

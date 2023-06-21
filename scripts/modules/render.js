@@ -1,7 +1,7 @@
 import { getCurrentDateTime } from "./utils.js";
 
 const renderWidgetToday = (widget) => {
-	const {year, month, dayOfWeek, dayOfMonth, hours, minutes} = getCurrentDateTime();
+	const { year, month, dayOfWeek, dayOfMonth, hours, minutes } = getCurrentDateTime();
 
 	widget.insertAdjacentHTML(
 		'beforeend',
